@@ -1,0 +1,21 @@
+{
+  "name": "mlabsflow-uploader",
+  "version": "1.0.0",
+  "description": "Large-file upload relay for mLabs Flow (bypasses the 100MB Cloudflare Workers limit). Talks to Cloudflare D1 via its HTTP API and to R2 via its S3-compatible API, so the database and media storage stay on Cloudflare's free tier.",
+  "private": true,
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.658.0",
+    "@aws-sdk/lib-storage": "^3.658.0",
+    "@fastify/cors": "^9.0.1",
+    "@fastify/multipart": "^8.3.0",
+    "fastify": "^4.28.1"
+  }
+}
